@@ -37,6 +37,8 @@ gem 'font-awesome-sass'
 gem 'paperclip'
 gem 'activerecord-session_store'
 gem 'ckeditor'
+gem 'active_link_to'
+
 
 
 

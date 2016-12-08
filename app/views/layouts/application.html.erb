@@ -17,7 +17,10 @@
   <!-- The justified navigation menu is meant for single line per list item.
        Multiple lines will require custom code not provided by Bootstrap. -->
   <div class="masthead">
-    <h3 class="text-muted">Project name</h3>
+    <%= link_to root_path do %>
+      <%= image_tag 'logo', height: '100px' %>
+    <% end %>
+    <!--<h3 class="text-muted inline">Callista Consalting</h3>-->
     <%= render partial: 'shared/navigation' %>
   </div>
 
@@ -26,7 +29,7 @@
 
   <!-- Site footer -->
   <footer class="footer">
-    <p>&copy; 2016 Company, Inc.</p>
+    <p>&copy; 2016 Callista COnsalting.</p>
   </footer>
 
 </div> <!-- /container -->

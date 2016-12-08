@@ -1,10 +1,12 @@
 <nav>
   <ul class="nav nav-justified">
-    <li class="active"><a href="#">Home</a></li>
+
+    <%= active_link_to 'Home', root_path, :active => :exclusive, :wrap_tag => :li %>
+    <%= active_link_to 'Services', services_path, :active => :inclusive, :wrap_tag => :li %>
+    <%= active_link_to 'Temporary', pages_path, :active => :inclusive, :wrap_tag => :li %>
+
     <li><a href="#">Projects</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Downloads</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#">Realty</a></li>
     <li><a href="#">Contact</a></li>
   </ul>
 </nav>
