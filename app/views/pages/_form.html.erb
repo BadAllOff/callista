@@ -16,12 +16,17 @@
     <%= f.text_field :title, class: "form-control"  %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
+    <%= f.label :jumbotron %>
+    <%=  collection_select(:page, :jumbotron_id, Jumbotron.all, :id, :head_text, {}, { class: 'form-control' }) %>
+  </div>
+
+  <div class="field form-group">
     <%= f.label :description %>
     <%= f.cktext_area :description %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

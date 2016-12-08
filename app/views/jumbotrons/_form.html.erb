@@ -11,27 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :head_text %>
-    <%= f.text_field :head_text %>
+    <%= f.text_field :head_text, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :lead_text %>
-    <%= f.text_field :lead_text %>
+    <%= f.text_field :lead_text, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :button_text %>
-    <%= f.text_field :button_text %>
+    <%= f.text_field :button_text, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :btn_color %>
-    <%= f.text_field :btn_color %>
+    <%= f.text_field :btn_color, type: 'color', class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
