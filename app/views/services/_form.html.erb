@@ -1,0 +1,36 @@
+<%= form_for(service, html: { multipart: true }) do |f| %>
+  <% if service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
+
+      <ul>
+      <% service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.file_field :preview_img %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :preview %>
+    <%= f.cktext_area :preview %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :description %>
+    <%= f.cktext_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
