@@ -1,0 +1,37 @@
+<%= form_for(jumbotron) do |f| %>
+  <% if jumbotron.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(jumbotron.errors.count, "error") %> prohibited this jumbotron from being saved:</h2>
+
+      <ul>
+      <% jumbotron.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :head_text %>
+    <%= f.text_field :head_text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lead_text %>
+    <%= f.text_field :lead_text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :button_text %>
+    <%= f.text_field :button_text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :btn_color %>
+    <%= f.text_field :btn_color %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,1 @@
+json.partial! "jumbotrons/jumbotron", jumbotron: @jumbotron
