@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161208151401) do
+ActiveRecord::Schema.define(version: 20161208165802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,14 @@ ActiveRecord::Schema.define(version: 20161208151401) do
     t.datetime "updated_at",   null: false
     t.integer  "jumbotron_id"
     t.index ["jumbotron_id"], name: "index_pages_on_jumbotron_id", using: :btree
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "title",       default: "Project title"
+    t.text     "preview",     default: "Project Preview text"
+    t.text     "description", default: "Project description text"
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
   end
 
   create_table "services", force: :cascade do |t|

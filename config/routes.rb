@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :jumbotrons
   resources :pages
   mount Ckeditor::Engine => '/ckeditor'
