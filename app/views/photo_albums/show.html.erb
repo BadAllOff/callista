@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Destroy', @photo_album, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+<p>
+  <strong>Title:</strong>
+  <%= @photo_album.title %>
+</p>
+
+<div>
+  <% @photo_album.photos.each_slice(4) do |photos| %>
+      <div>
+        <% photos.each do |photo| %>
+          <%= image_tag photo.thumb.url, class: 'img-responsive img-thumbnail', alt: 'Alt text' %>
+        <% end %>
+      </div>
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_photo_album_path(@photo_album) %> |
+<%= link_to 'Back', photo_albums_path %>

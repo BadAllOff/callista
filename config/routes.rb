@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photo_albums
   resources :realties
   resources :projects
   resources :jumbotrons

@@ -38,7 +38,8 @@ gem 'paperclip'
 gem 'activerecord-session_store'
 gem 'ckeditor'
 gem 'active_link_to'
-
+gem 'rmagick'
+gem 'carrierwave', '>= 1.0.0.rc'
 
 
 
