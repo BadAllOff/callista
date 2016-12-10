@@ -2,5 +2,5 @@
 
 <%= render partial: 'jumbotrons/jumbotron', locals: { jumbotron: @jumbotron } %>
 
-<%= link_to 'Edit', edit_jumbotron_path(@jumbotron) %> |
-<%= link_to 'Back', jumbotrons_path %>
+<%= link_to 'Edit', edit_jumbotron_path(@jumbotron), class: 'btn btn-default' %> |
+<%= link_to 'Back', jumbotrons_path, class: 'btn btn-default' %>

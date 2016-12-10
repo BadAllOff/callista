@@ -1,0 +1,27 @@
+<%= form_for(realty) do |f| %>
+  <% if realty.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(realty.errors.count, "error") %> prohibited this realty from being saved:</h2>
+
+      <ul>
+      <% realty.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.cktext_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,14 +2,7 @@
 
 <h1>Projects</h1>
     <% @projects.each do |project| %>
-        <h4><%= project.title %></h4>
-        <div><%= project.preview.html_safe %></div>
-        <div>
-          <%= link_to 'Show', project, class: 'btn btn-default' %>
-          <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-default' %>
-          <%= link_to 'Destroy', project, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
-        </div>
-    <hr>
+        <%= render partial: 'projects/project', locals: { project: project} %>
     <% end %>
 <br>
 

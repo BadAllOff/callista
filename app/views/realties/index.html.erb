@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Realties</h1>
+<%= link_to 'New Realty', new_realty_path, class: 'btn btn-default btn-xs' %>
+
+
+  <% @realties.each do |realty| %>
+    <%= render partial: 'realties/realty', locals: { realty: realty } %>
+  <% end %>
+<br>
+

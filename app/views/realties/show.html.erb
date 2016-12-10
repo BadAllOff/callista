@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+
+<%= render partial: 'realties/realty', locals: { realty: @realty } %>
+
+<%= link_to 'Edit', edit_realty_path(@realty), class: 'btn btn-default' %> |
+<%= link_to 'Back', realties_path, class: 'btn btn-default' %>
