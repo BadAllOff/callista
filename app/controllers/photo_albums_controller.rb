@@ -69,6 +69,6 @@ class PhotoAlbumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_album_params
-      params.require(:photo_album).permit(:title, { photos: [] })
+      params.require(:photo_album).permit(:title, :realty_id, { photos: [] })
     end
 end

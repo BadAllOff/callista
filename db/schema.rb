@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210033734) do
+ActiveRecord::Schema.define(version: 20161210220413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,8 @@ ActiveRecord::Schema.define(version: 20161210033734) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json     "photos"
+    t.integer  "realty_id"
+    t.index ["realty_id"], name: "index_photo_albums_on_realty_id", using: :btree
   end
 
   create_table "projects", force: :cascade do |t|
@@ -71,8 +73,12 @@ ActiveRecord::Schema.define(version: 20161210033734) do
   create_table "realties", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "realty_img_file_name"
+    t.string   "realty_img_content_type"
+    t.integer  "realty_img_file_size"
+    t.datetime "realty_img_updated_at"
   end
 
   create_table "services", force: :cascade do |t|

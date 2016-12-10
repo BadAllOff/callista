@@ -1,6 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<%= render partial: 'realties/realty', locals: { realty: @realty } %>
+<h2><%= @realty.title %></h2>
+<%= @realty.description.html_safe %>
+<p>
+  <%= link_to 'Show', @realty, class: 'btn btn-default btn-xs' %>
+  <%= link_to 'Edit', edit_realty_path(@realty), class: 'btn btn-default btn-xs' %>
+  <%= link_to 'Destroy', @realty, method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
+</p>
+
+<div class="realty_images">
+  <% if @realty.photo_album.present?  %>
+      <h3><%= @realty.photo_album.title %></h3>
+      <% @realty.photo_album.photos.each_slice(4) do |photos| %>
+          <div>
+            <% photos.each_with_index do |photo, index| %>
+                <div class="pull-left">
+                  <div>
+                    <%= image_tag photo.thumb.url,
+                                  class: 'img-responsive img-thumbnail',
+                                  alt: 'Alt text',
+                                  data: { toggle: 'lightbox',
+                                          gallery: @realty.photo_album.id,
+                                          type: 'image',
+                                          remote: photo.url }%>
+                  </div>
+
+                  <div>
+                    <%= link_to "Delete", photo_album_photo_path(@realty.photo_album, index),
+                                method: :delete,
+                                class: 'btn btn-danger',
+                                data: { confirm: "Are you sure you want to delete this image?" } %>
+                  </div>
+                </div>
+            <% end %>
+          </div>
+          <p class="clearfix"></p>
+      <% end %>
+  <% end %>
+</div>
 
 <%= link_to 'Edit', edit_realty_path(@realty), class: 'btn btn-default' %> |
 <%= link_to 'Back', realties_path, class: 'btn btn-default' %>

@@ -69,6 +69,6 @@ class RealtiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def realty_params
-      params.require(:realty).permit(:title, :description)
+      params.require(:realty).permit(:title, :description, :realty_img)
     end
 end

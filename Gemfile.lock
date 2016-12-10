@@ -90,6 +90,7 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     libv8 (3.16.14.17)
+    lightbox-bootstrap-rails (3.3.0.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -199,6 +200,7 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder
   jquery-rails
+  lightbox-bootstrap-rails
   paperclip
   pg
   rails (= 5.0.0.1)

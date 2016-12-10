@@ -40,6 +40,7 @@ gem 'ckeditor'
 gem 'active_link_to'
 gem 'rmagick'
 gem 'carrierwave', '>= 1.0.0.rc'
+gem 'lightbox-bootstrap-rails'
 
 
 
