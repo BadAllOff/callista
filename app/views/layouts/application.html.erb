@@ -16,10 +16,20 @@
 
   <!-- The justified navigation menu is meant for single line per list item.
        Multiple lines will require custom code not provided by Bootstrap. -->
-  <div class="masthead">
+  <div>
     <%= link_to root_path do %>
-      <%= image_tag 'logo', height: '100px' %>
+        <%= image_tag 'logo', height: '100px' %>
     <% end %>
+      <address class="pull-right">
+        21 M. Mehdizade str.<br>
+        Baku, AZ 1025<br>
+        <abbr title="Phone and Whatsapp">P\W:</abbr> (123) 456-7890<br>
+        callistabaku@gmail.com
+      </address>
+  </div>
+
+  <div class="masthead">
+
     <!--<h3 class="text-muted inline">Callista Consalting</h3>-->
     <%= render partial: 'shared/navigation' %>
   </div>
