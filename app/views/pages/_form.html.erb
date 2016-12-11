@@ -18,7 +18,7 @@
 
   <div class="field form-group">
     <%= f.label :jumbotron %>
-    <%=  collection_select(:page, :jumbotron_id, Jumbotron.all, :id, :head_text, {}, { class: 'form-control' }) %>
+    <%=  collection_select(:page, :jumbotron_id, Jumbotron.all, :id, :head_text, {include_blank: 'Выбрать витрину'}, { class: 'form-control' }) %>
   </div>
 
   <div class="field form-group">

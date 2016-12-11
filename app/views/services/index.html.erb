@@ -1,7 +1,7 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= t('titles.services') %></h1>
-<%= link_to 'New Service', new_service_path, class: 'btn btn-default' %>
+<% if user_signed_in? %>
+  <%= link_to 'New Service', new_service_path, class: 'btn btn-default' %>
+<% end %>
 <br>
 
 <div class="row">

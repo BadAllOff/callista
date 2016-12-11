@@ -1,10 +1,10 @@
-<p id="notice"><%= notice %></p>
-
 <h1>
   <%= @project.title %>
 </h1>
 
 <%= @project.description.html_safe %>
+<% if user_signed_in? %>
+  <%= link_to t('btns.edit'), edit_project_path(@project), class: 'btn btn-default' %> |
+<% end %>
 
-<%= link_to 'Edit', edit_project_path(@project), class: 'btn btn-default' %> |
-<%= link_to 'Back', projects_path, class: 'btn btn-default' %>
+<%= link_to t('btns.back'), projects_path, class: 'btn btn-default' %>

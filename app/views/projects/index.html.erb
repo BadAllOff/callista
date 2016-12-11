@@ -1,9 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= t'titles.projects' %></h1>
     <% @projects.each do |project| %>
         <%= render partial: 'projects/project', locals: { project: project} %>
     <% end %>
 <br>
-
-<%= link_to 'New Project', new_project_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>

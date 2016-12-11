@@ -4,10 +4,11 @@
     <%= active_link_to t('navigation.links.services'), services_path, :active => :inclusive, :wrap_tag => :li %>
     <%= active_link_to t('navigation.links.projects'), projects_path, :active => :inclusive, :wrap_tag => :li %>
     <%= active_link_to t('navigation.links.realty'), realties_path, :active => :inclusive, :wrap_tag => :li %>
-
     <li><a href="#"><%= t('navigation.links.contact') %></a></li>
-    <%= active_link_to t('navigation.links.photos'), photo_albums_path, :active => :inclusive, :wrap_tag => :li %>
-    <%= active_link_to t('navigation.links.pages'), pages_path, :active => :inclusive, :wrap_tag => :li %>
-    <%= active_link_to t('navigation.links.jumbotrons'), jumbotrons_path, :active => :inclusive, :wrap_tag => :li %>
+    <% if user_signed_in? %>
+      <%= active_link_to t('navigation.links.photos'), photo_albums_path, :active => :inclusive, :wrap_tag => :li %>
+      <%= active_link_to t('navigation.links.pages'), pages_path, :active => :inclusive, :wrap_tag => :li %>
+      <%= active_link_to t('navigation.links.jumbotrons'), jumbotrons_path, :active => :inclusive, :wrap_tag => :li %>
+    <% end %>
   </ul>
 </nav>

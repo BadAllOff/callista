@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= t'titles.pages' %></h1>
 <%= link_to 'New Page', new_page_path, class: 'btn btn-default' %>
 
@@ -16,9 +14,16 @@
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.title %></td>
-        <td><%= link_to 'Show', page, class: 'btn btn-xs btn-default'  %></td>
-        <td><%= link_to 'Edit', edit_page_path(page), class: 'btn btn-xs btn-default'  %></td>
-        <td><%= link_to 'Destroy', page, class: 'btn btn-xs btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('btns.show'), page, class: 'btn btn-xs btn-default'  %></td>
+        <td><%= link_to t('btns.edit'), edit_page_path(page), class: 'btn btn-xs btn-default'  %></td>
+        <td>
+          <% if page.id == 1 %>
+              <span class="text-danger">Нельзя удалять (Главная)</span>
+          <% else %>
+            <%= link_to t('btns.destroy'), page, class: 'btn btn-xs btn-danger',
+                        method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>

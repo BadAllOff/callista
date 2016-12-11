@@ -42,18 +42,22 @@
   </div>
 
   <div class="masthead">
-
     <!--<h3 class="text-muted inline">Callista Consalting</h3>-->
     <%= render partial: 'shared/navigation' %>
   </div>
+  <%= flash_messages %>
 
   <!-- Example row of columns -->
   <%= yield %>
 
   <!-- Site footer -->
   <footer class="footer">
-    <p>&copy; 2016 Callista Consalting.
-    <%= link_to 'Log in', new_user_session_path %>
+    <p>&copy; 2016-2017 Callista Consalting.
+      <% if user_signed_in? %>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Log in', new_user_session_path %>
+      <% end %>
     </p>
   </footer>
 

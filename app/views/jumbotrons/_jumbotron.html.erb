@@ -5,6 +5,8 @@
   </p>
   <p><a class="btn btn-lg btn-success" href="#" style="background-color: <%= jumbotron.btn_color %>;" role="button"> <%= jumbotron.button_text %></a></p>
 </div>
+<% if user_signed_in? %>
 <%= link_to t('btns.show'), jumbotron, class: 'btn btn-xs btn-default' %>
 <%= link_to t('btns.edit'), edit_jumbotron_path(jumbotron), class: 'btn btn-xs btn-default' %>
 <%= link_to t('btns.destroy'), jumbotron, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
+<% end %>
