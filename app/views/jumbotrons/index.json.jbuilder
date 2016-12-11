@@ -1,1 +1,0 @@
-json.array! @jumbotrons, partial: 'jumbotrons/jumbotron', as: :jumbotron

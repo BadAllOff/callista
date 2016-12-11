@@ -8,9 +8,9 @@
     <h4 class="media-heading"><%= project.title %></h4>
     <%= project.description.html_safe %>
     <p>
-      <%= link_to 'Show', project, class: 'btn btn-default' %>
-      <%= link_to 'Edit', edit_project_path(project), class: 'btn btn-default' %>
-      <%= link_to 'Destroy', project, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
+      <%= link_to t('btns.show'), project, class: 'btn btn-default' %>
+      <%= link_to t('btns.edit'), edit_project_path(project), class: 'btn btn-default' %>
+      <%= link_to t('btns.destroy'), project, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure?' } %>
     </p>
   </div>
 </div>

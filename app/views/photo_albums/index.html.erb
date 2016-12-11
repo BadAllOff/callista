@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Photo Albums</h1>
+<h1><%= t'titles.photos' %></h1>
 
 <table>
   <thead>
@@ -14,9 +14,9 @@
     <% @photo_albums.each do |photo_album| %>
       <tr>
         <td><%= photo_album.title %></td>
-        <td><%= link_to 'Show', photo_album %></td>
-        <td><%= link_to 'Edit', edit_photo_album_path(photo_album) %></td>
-        <td><%= link_to 'Destroy', photo_album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('btns.show'), photo_album %></td>
+        <td><%= link_to t('btns.edit'), edit_photo_album_path(photo_album) %></td>
+        <td><%= link_to t('btns.destroy'), photo_album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

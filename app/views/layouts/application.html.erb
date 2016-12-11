@@ -26,6 +26,19 @@
         <abbr title="Phone and Whatsapp">P\W:</abbr> (123) 456-7890<br>
         callistabaku@gmail.com
       </address>
+    <ul class="pull-left list-unstyled">
+      <li class="btn btn-default btn-xs">
+        <%= link_to_unless_current("AZ", { locale: 'az' }, class: '') %>
+      </li>
+      <br>
+      <li class="btn btn-default btn-xs">
+        <%= link_to_unless_current("EN", { locale: 'en' }, class: '') %>
+      </li>
+      <br>
+      <li class="btn btn-default btn-xs">
+        <%= link_to_unless_current("RU", { locale: 'ru' }, class: '') %>
+      </li>
+    </ul>
   </div>
 
   <div class="masthead">

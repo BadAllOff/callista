@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
-  resources :photo_albums do
-    resources :photos, :only => [:create, :destroy]
-  end
-  resources :realties
-  resources :projects
-  resources :jumbotrons
-  resources :pages
-  mount Ckeditor::Engine => '/ckeditor'
-  resources :services
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+    resources :photo_albums do
+      resources :photos, :only => [:create, :destroy]
+    end
+    resources :realties
+    resources :projects
+    resources :jumbotrons
+    resources :pages
+    mount Ckeditor::Engine => '/ckeditor'
+    resources :services
+    # The priority is based upon order of creation: first created -> highest priority.
+    # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root :to => "pages#show", :id => '1'
+    # You can have the root of your site routed with "root"
+    root :to => "pages#show", :id => '1'
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

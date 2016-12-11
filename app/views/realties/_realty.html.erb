@@ -8,9 +8,9 @@
     <h4 class="media-heading"><%= realty.title %></h4>
     <%= realty.description.html_safe %>
     <p>
-      <%= link_to 'Show', realty, class: 'btn btn-default btn-xs' %>
-      <%= link_to 'Edit', edit_realty_path(realty), class: 'btn btn-default btn-xs' %>
-      <%= link_to 'Destroy', realty, method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
+      <%= link_to t('btns.show'), realty, class: 'btn btn-default btn-xs' %>
+      <%= link_to t('btns.edit'), edit_realty_path(realty), class: 'btn btn-default btn-xs' %>
+      <%= link_to t('btns.destroy'), realty, method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
     </p>
   </div>
 </div>

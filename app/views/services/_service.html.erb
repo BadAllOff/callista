@@ -13,9 +13,9 @@
         <%= link_to 'View details »', service, class: "btn btn-lg btn-default"  %>
       </p>
       <p>
-        <%= link_to 'Show', service, class: 'btn btn-xs btn-default' %>
-        <%= link_to 'Edit', edit_service_path(service), class: 'btn btn-xs btn-default' %>
-        <%= link_to 'Destroy', service, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
+        <%= link_to t('btns.show'), service, class: 'btn btn-xs btn-default' %>
+        <%= link_to t('btns.edit'), edit_service_path(service), class: 'btn btn-xs btn-default' %>
+        <%= link_to t('btns.destroy'), service, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
       </p>
     </div>
   </div>

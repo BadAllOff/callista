@@ -2,5 +2,5 @@
 
 <%= render 'form', page: @page %>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+<%= link_to t('btns.edit'), @page, class: 'btn btn-xs btn-default' %> |
+<%= link_to t('btns.back'), pages_path, class: 'btn btn-xs btn-default' %>

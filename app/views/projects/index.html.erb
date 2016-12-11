@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<h1><%= t'titles.projects' %></h1>
     <% @projects.each do |project| %>
         <%= render partial: 'projects/project', locals: { project: project} %>
     <% end %>

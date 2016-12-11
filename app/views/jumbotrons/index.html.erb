@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Jumbotrons</h1>
+<h1><%= t'titles.jumbotrons' %></h1>
 
 <% @jumbotrons.each do |jumbotron| %>
     <%= render partial: 'jumbotrons/jumbotron', locals: { jumbotron: jumbotron } %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210220413) do
+ActiveRecord::Schema.define(version: 20161211013735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(version: 20161210220413) do
     t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
   end
 
+  create_table "jumbotron_translations", force: :cascade do |t|
+    t.integer  "jumbotron_id", null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "head_text"
+    t.string   "lead_text"
+    t.string   "button_text"
+    t.index ["jumbotron_id"], name: "index_jumbotron_translations_on_jumbotron_id", using: :btree
+    t.index ["locale"], name: "index_jumbotron_translations_on_locale", using: :btree
+  end
+
   create_table "jumbotrons", force: :cascade do |t|
     t.string   "head_text",   default: "Marketing stuff!"
     t.string   "lead_text",   default: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet."
@@ -38,6 +50,17 @@ ActiveRecord::Schema.define(version: 20161210220413) do
     t.string   "btn_color",   default: "blue"
     t.datetime "created_at",                                                                                                                                                                                       null: false
     t.datetime "updated_at",                                                                                                                                                                                       null: false
+  end
+
+  create_table "page_translations", force: :cascade do |t|
+    t.integer  "page_id",     null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["locale"], name: "index_page_translations_on_locale", using: :btree
+    t.index ["page_id"], name: "index_page_translations_on_page_id", using: :btree
   end
 
   create_table "pages", force: :cascade do |t|
@@ -49,6 +72,16 @@ ActiveRecord::Schema.define(version: 20161210220413) do
     t.index ["jumbotron_id"], name: "index_pages_on_jumbotron_id", using: :btree
   end
 
+  create_table "photo_album_translations", force: :cascade do |t|
+    t.integer  "photo_album_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "title"
+    t.index ["locale"], name: "index_photo_album_translations_on_locale", using: :btree
+    t.index ["photo_album_id"], name: "index_photo_album_translations_on_photo_album_id", using: :btree
+  end
+
   create_table "photo_albums", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at", null: false
@@ -56,6 +89,18 @@ ActiveRecord::Schema.define(version: 20161210220413) do
     t.json     "photos"
     t.integer  "realty_id"
     t.index ["realty_id"], name: "index_photo_albums_on_realty_id", using: :btree
+  end
+
+  create_table "project_translations", force: :cascade do |t|
+    t.integer  "project_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.text     "preview"
+    t.index ["locale"], name: "index_project_translations_on_locale", using: :btree
+    t.index ["project_id"], name: "index_project_translations_on_project_id", using: :btree
   end
 
   create_table "projects", force: :cascade do |t|
@@ -79,6 +124,28 @@ ActiveRecord::Schema.define(version: 20161210220413) do
     t.string   "realty_img_content_type"
     t.integer  "realty_img_file_size"
     t.datetime "realty_img_updated_at"
+  end
+
+  create_table "realty_translations", force: :cascade do |t|
+    t.integer  "realty_id",   null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["locale"], name: "index_realty_translations_on_locale", using: :btree
+    t.index ["realty_id"], name: "index_realty_translations_on_realty_id", using: :btree
+  end
+
+  create_table "service_translations", force: :cascade do |t|
+    t.integer  "service_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "title"
+    t.text     "description"
+    t.index ["locale"], name: "index_service_translations_on_locale", using: :btree
+    t.index ["service_id"], name: "index_service_translations_on_service_id", using: :btree
   end
 
   create_table "services", force: :cascade do |t|
