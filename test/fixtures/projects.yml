@@ -3,9 +3,6 @@
 # Table name: projects
 #
 #  id                       :integer          not null, primary key
-#  title                    :string           default("Project title")
-#  preview                  :text             default("Project Preview text")
-#  description              :text             default("Project description text")
 #  created_at               :datetime         not null
 #  updated_at               :datetime         not null
 #  project_img_file_name    :string

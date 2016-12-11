@@ -44,6 +44,8 @@ gem 'lightbox-bootstrap-rails'
 gem 'globalize', github: 'globalize/globalize'
 gem 'activemodel-serializers-xml'
 gem 'annotate'
+gem 'devise'
+gem 'devise-i18n'
 
 
 

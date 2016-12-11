@@ -3,8 +3,6 @@
 # Table name: realties
 #
 #  id                      :integer          not null, primary key
-#  title                   :string
-#  description             :text
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
 #  realty_img_file_name    :string
