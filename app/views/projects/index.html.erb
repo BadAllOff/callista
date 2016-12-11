@@ -1,7 +1,11 @@
-<h1><%= t'titles.projects' %></h1>
-    <% @projects.each do |project| %>
-        <%= render partial: 'projects/project', locals: { project: project} %>
-    <% end %>
+<br>
+<ol class="breadcrumb">
+  <li><%= link_to t('navigation.links.home') , root_path %></li>
+  <li><%= link_to t('titles.projects'), projects_path %></li>
+</ol>
+<% @projects.each do |project| %>
+    <%= render partial: 'projects/project', locals: { project: project} %>
+<% end %>
 <br>
 <% if user_signed_in? %>
   <%= link_to 'New Project', new_project_path %>

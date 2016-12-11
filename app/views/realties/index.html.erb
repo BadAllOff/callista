@@ -1,4 +1,8 @@
-<h1><%= t'titles.realty' %></h1>
+<br>
+<ol class="breadcrumb">
+  <li><%= link_to t('navigation.links.home') , root_path %></li>
+  <li><%= link_to t('titles.realty'), realties_path %></li>
+</ol>
 <% if user_signed_in? %>
   <%= link_to 'New Realty', new_realty_path, class: 'btn btn-default btn-xs' %>
 <% end %>

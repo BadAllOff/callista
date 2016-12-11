@@ -1,4 +1,8 @@
-<h1><%= t('titles.services') %></h1>
+<br>
+<ol class="breadcrumb">
+  <li><a href="#"><%= t('navigation.links.home') %></a></li>
+  <li><a href="#"><%= t('titles.services') %></a></li>
+</ol>
 <% if user_signed_in? %>
   <%= link_to 'New Service', new_service_path, class: 'btn btn-default' %>
 <% end %>

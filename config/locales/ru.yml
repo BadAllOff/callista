@@ -2,7 +2,7 @@
 ru:
   navigation:
     links:
-      home: 'Домой'
+      home: 'Главная'
       services: 'Услуги'
       projects: 'Проекты'
       realty: 'Недвижимость'
@@ -24,6 +24,8 @@ ru:
     edit: 'Редактировать'
     destroy: 'Удалить'
     back: 'Назад'
+  services:
+    view_details: 'Узнать больше'
   activerecord:
     errors:
       messages:

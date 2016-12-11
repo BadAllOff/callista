@@ -17,8 +17,8 @@
         <td><%= link_to t('btns.show'), page, class: 'btn btn-xs btn-default'  %></td>
         <td><%= link_to t('btns.edit'), edit_page_path(page), class: 'btn btn-xs btn-default'  %></td>
         <td>
-          <% if page.id == 1 %>
-              <span class="text-danger">Нельзя удалять (Главная)</span>
+          <% if (1..2).include? page.id %>
+              <span class="text-danger">Нельзя удалять</span>
           <% else %>
             <%= link_to t('btns.destroy'), page, class: 'btn btn-xs btn-danger',
                         method: :delete, data: { confirm: 'Are you sure?' } %>
