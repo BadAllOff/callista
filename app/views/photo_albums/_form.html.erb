@@ -13,22 +13,24 @@
 
   <div class="row">
     <div class="field form-group col-sm-12 col-md-6">
-      <%= f.label :realty %>
+      <%= f.label :realty, 'Выбрать недвижимость' %>
       <%=  collection_select(:photo_album, :realty_id, Realty.all, :id, :title, {}, { class: 'form-control' }) %>
     </div>
   </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="field form-group">
+    <%= f.label :title, 'Название для альбома' %>
+    <%= f.text_field :title, class: 'form-control' %>
+    <p class="help-block">Можно оставить пустым</p>
   </div>
 
   <div class="form-group">
     <%= f.label :photos %>
     <%= f.file_field :photos, multiple: true %>
+    <p class="help-block">Выбрать несколько фотографий с расширениями jpg jpeg gif png</p>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

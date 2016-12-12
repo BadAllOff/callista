@@ -3,10 +3,11 @@
   <li><%= link_to t('navigation.links.home') , root_path %></li>
   <li><%= link_to t('titles.projects'), projects_path %></li>
 </ol>
+
+<% if user_signed_in? %>
+    <%= link_to t('btns.project.new'), new_project_path, class: 'btn btn-lg btn-primary' %>
+<% end %>
+
 <% @projects.each do |project| %>
     <%= render partial: 'projects/project', locals: { project: project} %>
-<% end %>
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Project', new_project_path %>
 <% end %>

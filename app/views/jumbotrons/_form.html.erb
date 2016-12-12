@@ -12,22 +12,24 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :head_text %>
+    <%= f.label :head_text, 'Большой заголовок' %>
     <%= f.text_field :head_text, class: 'form-control' %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :lead_text %>
+    <%= f.label :lead_text, 'Информирующий текст' %>
     <%= f.text_field :lead_text, class: 'form-control' %>
+    <p class="help-block">Покороче</p>
   </div>
 
   <div class="field form-group">
-    <%= f.label :button_text %>
+    <%= f.label :button_text, 'Надпись на кнопке' %>
     <%= f.text_field :button_text, class: 'form-control' %>
+    <p class="help-block">Покороче</p>
   </div>
 
   <div class="field form-group">
-    <%= f.label :btn_color %>
+    <%= f.label :btn_color, 'Цвет кнопки' %>
     <%= f.text_field :btn_color, type: 'color', class: 'form-control' %>
   </div>
 

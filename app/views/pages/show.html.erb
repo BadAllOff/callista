@@ -8,6 +8,6 @@
   <%= @page.description.html_safe %>
 </div>
 <% if user_signed_in? %>
-<%= link_to t('btns.edit'), edit_page_path(@page), class: 'btn btn-default' %> |
+<%= link_to t('btns.edit'), edit_page_path(@page), class: 'btn btn-warning' %> |
 <%= link_to t('btns.back'), pages_path, class: 'btn btn-default' %>
 <% end %>

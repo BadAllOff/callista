@@ -1,5 +1,12 @@
 <div class="col-sm-6 col-md-4">
   <div class="thumbnail service-thumbnail">
+    <% if user_signed_in? %>
+        <p>
+          <%= link_to t('btns.show'), service, class: 'btn btn-xs btn-default' %>
+          <%= link_to t('btns.edit'), edit_service_path(service), class: 'btn btn-xs btn-warning' %>
+          <%= link_to t('btns.destroy'), service, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
+        </p>
+    <% end %>
     <img src="<%= service.preview_img.url(:original) if service.preview_img.present? %>" alt="<%= service.title %></h3>
           <%= service.title %>" class="img-responsive">
     <div class="caption">
@@ -11,15 +18,8 @@
       </div>
       <br>
       <p>
-        <%= link_to t('services.view_details')+' »', service, class: "btn btn-lg btn-default"  %>
+        <%= link_to t('services.view_details')+' »', service, class: 'btn btn-lg btn-default', style: 'bottom: 34px; position: absolute;'  %>
       </p>
-      <% if user_signed_in? %>
-      <p>
-        <%= link_to t('btns.show'), service, class: 'btn btn-xs btn-default' %>
-        <%= link_to t('btns.edit'), edit_service_path(service), class: 'btn btn-xs btn-default' %>
-        <%= link_to t('btns.destroy'), service, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
-      </p>
-      <% end %>
     </div>
   </div>
 </div>

@@ -19,6 +19,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "lightbox-bootstrap";
+@import 'bootstrap-datetimepicker';
 
 body {
   padding-top: 20px;
@@ -81,6 +82,11 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
+.flag-img{
+  width: 20px;
+  height: 13px;
+}
+
 @media (min-width: 768px) {
   .nav-justified {
     max-height: 52px;
@@ -115,7 +121,7 @@ body {
   height: 500px;
 
   .service-thumbnail-preview{
-    height: 95px;
+    height: 83px;
     overflow: hidden;
   }
 }

@@ -9,6 +9,6 @@
 #
 
 class Jumbotron < ApplicationRecord
-  translates :head_text, :lead_text, :button_text
+  translates :head_text, :lead_text, :button_text, :fallbacks_for_empty_translations => true
   has_many :pages
 end

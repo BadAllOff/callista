@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :realty_img %>
+  <div class="field form-group">
+    <%= f.label :realty_img, 'Картинка для превью' %>
     <%= f.file_field :realty_img %>
   </div>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="field form-group">
+    <%= f.label :title, 'Заголовок' %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
+  <div class="field form-group">
+    <%= f.label :description, 'Полное описание' %>
     <%= f.cktext_area :description %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>

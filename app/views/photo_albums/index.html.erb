@@ -1,6 +1,8 @@
 <h1><%= t'titles.photos' %></h1>
 
-<table>
+<%= link_to t('btns.photoalbum.new'), new_photo_album_path, class: 'btn btn-lg btn-primary' %>
+
+<table class="table table-hover table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -12,9 +14,9 @@
     <% @photo_albums.each do |photo_album| %>
       <tr>
         <td><%= photo_album.title %></td>
-        <td><%= link_to t('btns.show'), photo_album %></td>
-        <td><%= link_to t('btns.edit'), edit_photo_album_path(photo_album) %></td>
-        <td><%= link_to t('btns.destroy'), photo_album, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('btns.show'), photo_album, class: 'btn btn-xs btn-default' %></td>
+        <td><%= link_to t('btns.edit'), edit_photo_album_path(photo_album), class: 'btn btn-xs btn-warning' %></td>
+        <td><%= link_to t('btns.destroy'), photo_album, class: 'btn btn-xs btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +24,3 @@
 
 <br>
 
-<%= link_to 'New Photo Album', new_photo_album_path %>

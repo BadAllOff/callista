@@ -5,7 +5,7 @@
   <li><%= link_to @realty.title , realty_path(@realty) %></li>
 </ol>
 <h2><%= @realty.title %></h2>
-<%= @realty.description.html_safe %>
+<%= @realty.description.html_safe if @realty.description %>
 <% if user_signed_in? %>
   <p>
     <%= link_to t('btns.show'), @realty, class: 'btn btn-default btn-xs' %>

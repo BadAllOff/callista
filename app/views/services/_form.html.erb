@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label :preview_img %>
+    <%= f.label :preview_img, 'Картинка над превью текстом' %>
     <%= f.file_field :preview_img %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :title %>
+    <%= f.label :title, 'Заголовок' %>
     <%= f.text_field :title, class: "form-control" %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :preview %>
+    <%= f.label :preview, 'Превью текст' %>
     <%= f.cktext_area :preview %>
   </div>
 
   <div class="field form-group">
-    <%= f.label :description %>
+    <%= f.label :description, 'Полный текст с описанием' %>
     <%= f.cktext_area :description %>
   </div>
 

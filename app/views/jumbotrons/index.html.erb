@@ -1,9 +1,10 @@
 <h1><%= t'titles.jumbotrons' %></h1>
 
+<%= link_to t('btns.jumbotron.new'), new_jumbotron_path, class: 'btn btn-lg btn-primary' %>
+
 <% @jumbotrons.each do |jumbotron| %>
     <%= render partial: 'jumbotrons/jumbotron', locals: { jumbotron: jumbotron } %>
 <% end %>
 
 <br>
 
-<%= link_to 'New Jumbotron', new_jumbotron_path, class: 'btn btn-primary' %>

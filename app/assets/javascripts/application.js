@@ -15,4 +15,5 @@
 //= require jquery_ujs
 //= require ckeditor/init
 //= require lightbox-bootstrap
-//= require_tree .
+//= require moment
+//= require bootstrap-datetimepicker

@@ -21,6 +21,13 @@
     <%= f.text_field :title, class: 'form-control' %>
   </div>
 
+  <div class="row">
+    <div class="field form-group col-sm-12 col-md-4">
+      <%= f.label :start_date, 'Дата начала' %>
+      <%= f.text_field :start_date, id: 'datetimepicker1', class: 'form-control' %>
+    </div>
+  </div>
+
   <div class="field form-group">
     <%= f.label :preview %>
     <%= f.cktext_area :preview %>
@@ -35,3 +42,13 @@
     <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(function () {
+      $('#datetimepicker1').datetimepicker({
+        format: "YYYY-MM-DD HH:mm"
+      });
+    });
+  });
+</script>

@@ -7,8 +7,8 @@
 <h1>
   <%= @project.title %>
 </h1>
-
-<%= @project.description.html_safe %>
+<p class="text-muted"><%= t('projects.start_date') %>: <%= I18n.l @project.start_date, format: ("%b %d, %Y") if @project.start_date%></p>
+<%= @project.description.html_safe if @project.description %>
 <% if user_signed_in? %>
   <%= link_to t('btns.edit'), edit_project_path(@project), class: 'btn btn-default' %> |
 <% end %>

@@ -1,16 +1,18 @@
 <div class="media">
   <div class="media-left">
     <%= link_to project_path(project) do %>
-      <img alt="64x64" class="media-object img-responsive img-thumbnail" data-src="holder.js/64x64" src="<%= project.project_img.url(:thumb) if project.project_img.present? %>" data-holder-rendered="true">
+        <%= image_tag project.project_img.url(:thumb), class: "media-object img-responsive img-thumbnail" if project.project_img.present?%>
     <% end %>
   </div>
   <div class="media-body">
     <h4 class="media-heading">
       <%= link_to project_path(project) do %>
-          <%= project.title %>
+          <%= project.title if project.title%>
       <% end %>
     </h4>
-    <%= project.description.html_safe %>
+    <p class="text-muted"><%= t('projects.start_date') %>: <%= I18n.l project.start_date, format: ("%b %d, %Y") if project.start_date %></p>
+
+    <%= project.description.html_safe if project.description%>
     <% if user_signed_in? %>
       <p>
         <%= link_to t('btns.show'), project, class: 'btn btn-default' %>

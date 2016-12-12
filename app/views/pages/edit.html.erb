@@ -1,6 +1,6 @@
-<h1>Editing Page</h1>
+<h1><%= t'titles.pages' %></h1>
 
 <%= render 'form', page: @page %>
 
-<%= link_to t('btns.edit'), @page, class: 'btn btn-xs btn-default' %> |
+<%= link_to t('btns.show'), @page, class: 'btn btn-xs btn-default' %> |
 <%= link_to t('btns.back'), pages_path, class: 'btn btn-xs btn-default' %>

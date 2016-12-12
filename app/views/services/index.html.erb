@@ -4,13 +4,18 @@
   <li><a href="#"><%= t('titles.services') %></a></li>
 </ol>
 <% if user_signed_in? %>
-  <%= link_to 'New Service', new_service_path, class: 'btn btn-default' %>
+  <%= link_to 'New Service', new_service_path, class: 'btn btn-lg btn-primary' %>
 <% end %>
 <br>
 
 <div class="row">
-  <% @services.each do |service| %>
-    <%= render partial: 'services/service', locals: { service: service } %>
+  <% @services.each_slice(3) do |slice| %>
+    <div>
+      <% slice.each do |service| %>
+        <%= render partial: 'services/service', locals: { service: service } %>
+      <% end %>
+    </div>
+    <div class="clearfix"></div>
   <% end %>
 
 </div>

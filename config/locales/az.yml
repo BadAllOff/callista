@@ -1,5 +1,31 @@
 ---
 az:
+  navigation:
+    links:
+      home: 'Home'
+      services: 'Услуги'
+      projects: 'Проекты'
+      realty: 'Недвижимость'
+      contact: 'Контакты'
+      photos: 'Фото'
+      pages: 'Страницы'
+      jumbotrons: 'Вывиски'
+  titles:
+    home: 'Домой'
+    services: 'Услуги'
+    projects: 'Проекты'
+    realty: 'Недвижимость'
+    contact: 'Контакты'
+    photos: 'Фото'
+    pages: 'Страницы'
+    jumbotrons: 'Вывиски'
+  btns:
+    show: 'Показать'
+    edit: 'Редактировать'
+    destroy: 'Удалить'
+    back: 'Назад'
+  services:
+    view_details: 'Узнать больше'
   activerecord:
     errors:
       messages:

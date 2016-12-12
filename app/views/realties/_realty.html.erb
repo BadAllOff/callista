@@ -7,10 +7,10 @@
   <div class="media-body">
     <h4 class="media-heading">
       <%= link_to realty do %>
-        <%= realty.title %>
+        <%= realty.title if realty.title %>
       <% end %>
     </h4>
-    <%= realty.description.html_safe %>
+    <%= realty.description.html_safe if realty.description %>
     <% if user_signed_in? %>
       <p>
         <%= link_to t('btns.show'), realty, class: 'btn btn-default btn-xs' %>

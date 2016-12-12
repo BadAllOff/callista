@@ -46,6 +46,8 @@ gem 'activemodel-serializers-xml'
 gem 'annotate'
 gem 'devise'
 gem 'devise-i18n'
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 
 
 

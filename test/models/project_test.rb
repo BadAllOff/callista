@@ -9,6 +9,7 @@
 #  project_img_content_type :string
 #  project_img_file_size    :integer
 #  project_img_updated_at   :datetime
+#  start_date               :datetime
 #
 
 require 'test_helper'
