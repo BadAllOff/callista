@@ -10,8 +10,7 @@ class RealtiesController < ApplicationController
 
   # GET /realties/1
   # GET /realties/1.json
-  def show
-  end
+  def show; end
 
   # GET /realties/new
   def new
@@ -19,8 +18,7 @@ class RealtiesController < ApplicationController
   end
 
   # GET /realties/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /realties
   # POST /realties.json

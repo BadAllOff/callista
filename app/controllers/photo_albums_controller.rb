@@ -10,8 +10,7 @@ class PhotoAlbumsController < ApplicationController
 
   # GET /photo_albums/1
   # GET /photo_albums/1.json
-  def show
-  end
+  def show; end
 
   # GET /photo_albums/new
   def new
@@ -19,8 +18,7 @@ class PhotoAlbumsController < ApplicationController
   end
 
   # GET /photo_albums/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /photo_albums
   # POST /photo_albums.json

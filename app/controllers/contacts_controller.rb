@@ -19,6 +19,6 @@ class ContactsController < ApplicationController
   private
 
   def set_page
-    @page = Page.find(2);
+    @page = Page.find(2)
   end
 end

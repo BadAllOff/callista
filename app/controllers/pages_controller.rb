@@ -10,8 +10,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1
   # GET /pages/1.json
-  def show
-  end
+  def show; end
 
   # GET /pages/new
   def new
@@ -19,8 +18,7 @@ class PagesController < ApplicationController
   end
 
   # GET /pages/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /pages
   # POST /pages.json

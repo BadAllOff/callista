@@ -13,7 +13,7 @@
 #
 
 class Page < ApplicationRecord
-  translates :title, :description, :fallbacks_for_empty_translations => true
+  translates :title, :description, fallbacks_for_empty_translations: true
 
   belongs_to :jumbotron
 end

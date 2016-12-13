@@ -10,8 +10,7 @@ class ServicesController < ApplicationController
 
   # GET /services/1
   # GET /services/1.json
-  def show
-  end
+  def show; end
 
   # GET /services/new
   def new
@@ -19,8 +18,7 @@ class ServicesController < ApplicationController
   end
 
   # GET /services/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /services
   # POST /services.json

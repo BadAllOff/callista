@@ -10,8 +10,7 @@ class JumbotronsController < ApplicationController
 
   # GET /jumbotrons/1
   # GET /jumbotrons/1.json
-  def show
-  end
+  def show; end
 
   # GET /jumbotrons/new
   def new
@@ -19,8 +18,7 @@ class JumbotronsController < ApplicationController
   end
 
   # GET /jumbotrons/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /jumbotrons
   # POST /jumbotrons.json

@@ -14,7 +14,7 @@
 #
 
 class PhotoAlbum < ApplicationRecord
-  translates :title, :fallbacks_for_empty_translations => true
+  translates :title, fallbacks_for_empty_translations: true
 
   belongs_to :realty
   mount_uploaders :photos, PhotosUploader

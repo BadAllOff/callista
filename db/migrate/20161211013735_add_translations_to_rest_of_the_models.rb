@@ -2,11 +2,11 @@ class AddTranslationsToRestOfTheModels < ActiveRecord::Migration[5.0]
   def change
     reversible do |dir|
       dir.up do
-        Jumbotron.create_translation_table! :head_text => :string, :lead_text => :string, :button_text => :string
-        PhotoAlbum.create_translation_table! :title => :string
-        Project.create_translation_table! :title => :string, :description => :text, :preview => :text
-        Realty.create_translation_table! :title => :string, :description => :text
-        Service.create_translation_table! :title => :string, :description => :text
+        Jumbotron.create_translation_table! head_text: :string, lead_text: :string, button_text: :string
+        PhotoAlbum.create_translation_table! title: :string
+        Project.create_translation_table! title: :string, description: :text, preview: :text
+        Realty.create_translation_table! title: :string, description: :text
+        Service.create_translation_table! title: :string, description: :text
       end
 
       dir.down do

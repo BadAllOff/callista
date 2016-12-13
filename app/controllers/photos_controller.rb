@@ -4,13 +4,13 @@ class PhotosController < ApplicationController
 
   def create
     add_more_photos(photos_params[:photos])
-    flash[:error] = "Failed uploading images" unless @photo_album.save
+    flash[:error] = 'Failed uploading images' unless @photo_album.save
     redirect_to :back
   end
 
   def destroy
     remove_image_at_index(params[:id].to_i)
-    flash[:error] = "Failed deleting image" unless @photo_album.save
+    flash[:error] = 'Failed deleting image' unless @photo_album.save
     redirect_to :back
   end
 
@@ -34,7 +34,7 @@ class PhotosController < ApplicationController
   end
 
   def photos_params
-    params.require(:photo_album).permit({photos: []}) # allow nested params as array
+    params.require(:photo_album).permit({ photos: [] }) # allow nested params as array
   end
 
 end
