@@ -14,6 +14,6 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require ckeditor/init
-//= require lightbox-bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
+//= require lightbox-bootstrap
