@@ -17,3 +17,16 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require lightbox-bootstrap
+
+var ready;
+
+ready = function() {
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+$(document).on('page:update', ready);
