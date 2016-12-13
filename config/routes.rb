@@ -11,11 +11,14 @@ Rails.application.routes.draw do
     resources :pages
     mount Ckeditor::Engine => '/ckeditor'
     resources :services
+
+    match '/contacts',     to: 'contacts#new',             via: 'get'
+    resources "contacts", only: [:new, :create]
     # The priority is based upon order of creation: first created -> highest priority.
     # See how all your routes lay out with "rake routes".
 
     # You can have the root of your site routed with "root"
-    get 'contacts' => "pages#show", :id => '2'
+    # get 'contacts' => "pages#show", :id => '2'
     root :to => "pages#show", :id => '1'
   end
 

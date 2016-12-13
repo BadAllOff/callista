@@ -9,7 +9,7 @@ ru:
       contact: 'Контакты'
       photos: 'Фотоальбомы'
       pages: 'Страницы'
-      jumbotrons: 'Вывиски'
+      jumbotrons: 'Вывeски'
   titles:
     home: 'Домой'
     services: 'Услуги'
@@ -30,10 +30,18 @@ ru:
       new: 'Создать новую Вывеску'
     project:
       new: 'Создать новый проект'
+    contacts:
+      send_message: 'Отправить сообщение'
   services:
     view_details: 'Узнать больше'
   projects:
     start_date: 'Дата мероприятия'
+  contacts:
+    name: 'Имя Фамилия'
+    email: 'Email'
+    message: 'Сообщение'
+    thank_you_for_your_message_we_will_contact_you_soon: 'Благодарим за Ваше сообщение. Мы скоро с вами свяжемся!'
+    cannot_send_message: 'Что то пошло не так. Невозможно отправить сообщение. Пожалуйста попробуйте позже.'
   activerecord:
     errors:
       messages:
