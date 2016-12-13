@@ -10,7 +10,7 @@ set :user, 'deployer'
 append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/uploads', 'public/ckeditor_assets'
+append :linked_dirs, 'bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/uploads', 'public/ckeditor_assets', 'vendor/bundle'
 
 namespace :deploy do
   %w[start stop restart].each do |command|
