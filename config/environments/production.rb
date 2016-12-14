@@ -87,7 +87,7 @@ Rails.application.configure do
       domain:               'callista.az',
       user_name:            Rails.application.secrets.default_email,
       password:             Rails.application.secrets.default_email_pass,
-      authentication:       'login',
+      authentication:       'plain',
       enable_starttls_auto: true
   }
 end
