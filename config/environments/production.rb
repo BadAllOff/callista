@@ -84,10 +84,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
       address:              'smtp.gmail.com',
       port:                 587,
-      domain:               'gmail.com',
+      domain:               'Callista.az',
       user_name:            Rails.application.secrets.default_email,
       password:             Rails.application.secrets.default_email_pass,
-      authentication:       'plain',
+      authentication:       :plain,
       enable_starttls_auto: true
   }
 end
