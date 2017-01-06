@@ -13,7 +13,7 @@
 public/assets
 public/sitemaps
 public/system
-public/ckeditor_assets/pictures/*
+public/ckeditor_assets/*
 # если установлен Paperclip
 Procfile
 # про него я еще расскажу

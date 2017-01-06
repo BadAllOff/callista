@@ -5,7 +5,6 @@
 #  id                       :integer          not null, primary key
 #  created_at               :datetime         not null
 #  updated_at               :datetime         not null
-#  preview                  :text
 #  preview_img_file_name    :string
 #  preview_img_content_type :string
 #  preview_img_file_size    :integer
