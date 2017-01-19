@@ -25,6 +25,8 @@ class PhotoAlbumsController < ApplicationController
   def create
     @photo_album = PhotoAlbum.new(photo_album_params)
 
+    PhotoAlbum.where(realty_id: photo_album_params[:realty_id]).update_all( realty_id: nil );
+
     respond_to do |format|
       if @photo_album.save
         format.html { redirect_to @photo_album, notice: 'Photo album was successfully created.' }
@@ -39,6 +41,8 @@ class PhotoAlbumsController < ApplicationController
   # PATCH/PUT /photo_albums/1
   # PATCH/PUT /photo_albums/1.json
   def update
+    PhotoAlbum.where(realty_id: photo_album_params[:realty_id]).update_all( realty_id: nil );
+
     respond_to do |format|
       if @photo_album.update(photo_album_params)
         format.html { redirect_to @photo_album, notice: 'Photo album was successfully updated.' }

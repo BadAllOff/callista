@@ -14,7 +14,7 @@
   <div class="row">
     <div class="field form-group col-sm-12 col-md-6">
       <%= f.label :realty, 'Выбрать недвижимость' %>
-      <%=  collection_select(:photo_album, :realty_id, Realty.all, :id, :title, {}, { class: 'form-control' }) %>
+      <%=  collection_select(:photo_album, :realty_id, Realty.all, :id, :title, {:include_blank => "Оставить пустым"}, { class: 'form-control'}) %>
     </div>
   </div>
 

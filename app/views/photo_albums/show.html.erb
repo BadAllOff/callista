@@ -1,4 +1,5 @@
 <%= link_to 'Destroy', @photo_album, class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_photo_album_path(@photo_album),  class: 'btn btn-warning' %>
 <p>
   <strong>Title:</strong>
   <%= @photo_album.title %>
