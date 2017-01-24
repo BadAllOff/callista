@@ -7,8 +7,7 @@
           <%= link_to t('btns.destroy'), service, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
         </p>
     <% end %>
-    <img src="<%= service.preview_img.url(:original) if service.preview_img.present? %>" alt="<%= service.title %></h3>
-          <%= service.title %>" class="img-responsive">
+    <img src="<%= service.preview_img.url(:original) if service.preview_img.present? %>" alt="<%= service.title %>" class="img-responsive">
     <div class="caption">
       <%= link_to service do %>
         <h3><%= service.title %></h3>

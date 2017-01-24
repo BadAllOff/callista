@@ -1,7 +1,11 @@
 <br>
 <ol class="breadcrumb">
   <li><%= link_to t('navigation.links.home') , root_path %></li>
-  <li><%= link_to t('titles.realty'), realties_path %></li>
+  <li><%= link_to t('titles.realty_countries'), realty_countries_path %></li>
+
+  <% if @realty_country %>
+      <li><%= link_to @realty_country.country_name , realty_country_realties_path(@realty_country) %></li>
+  <% end %>
   <li><%= link_to @realty.title , realty_path(@realty) %></li>
 </ol>
 <h2><%= @realty.title %></h2>
@@ -46,4 +50,8 @@
 <% if user_signed_in? %>
   <%= link_to t('btns.edit'), edit_realty_path(@realty), class: 'btn btn-default' %> |
 <% end %>
-<%= link_to t('btns.back'), realties_path, class: 'btn btn-default' %>
+<% if @realty_country %>
+    <%= link_to t('btns.back'), realty_country_realties_path(@realty_country), class: 'btn btn-default' %>
+<% else %>
+  <%= link_to t('btns.back'), realties_path, class: 'btn btn-default' %>
+<% end %>

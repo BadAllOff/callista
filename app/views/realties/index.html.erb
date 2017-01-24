@@ -1,15 +1,17 @@
 <br>
 <ol class="breadcrumb">
   <li><%= link_to t('navigation.links.home') , root_path %></li>
-  <li><%= link_to t('titles.realty'), realties_path %></li>
+  <li><%= link_to t('titles.realty_countries'), realty_countries_path %></li>
+  <% if @realty_country %>
+    <li><%= link_to @realty_country.country_name , realty_country_realties_path(@realty_country) %></li>
+  <% end %>
 </ol>
 <% if user_signed_in? %>
-  <%= link_to 'New Realty', new_realty_path, class: 'btn btn-default btn-xs' %>
+  <%= link_to 'New Realty', new_realty_path, class: 'btn btn-primary' %>
 <% end %>
 
-
-  <% @realties.each do |realty| %>
-    <%= render partial: 'realties/realty', locals: { realty: realty } %>
-  <% end %>
+<% @realties.each do |realty| %>
+  <%= render partial: 'realties/realty', locals: { realty: realty } %>
+<% end %>
 <br>
 

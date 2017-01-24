@@ -1,6 +1,7 @@
 class RealtiesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:show]
   before_action :set_realty, only: [:show, :edit, :update, :destroy]
+  before_action :set_realty_country, only: [:show]
 
   # GET /realties
   # GET /realties.json
@@ -66,8 +67,12 @@ class RealtiesController < ApplicationController
       @realty = Realty.find(params[:id])
     end
 
+    def set_realty_country
+      @realty_country = RealtyCountry.find(@realty.realty_country_id)
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def realty_params
-      params.require(:realty).permit(:title, :description, :realty_img)
+      params.require(:realty).permit(:title, :description, :realty_img, :realty_country_id)
     end
 end

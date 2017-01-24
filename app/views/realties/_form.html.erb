@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+    <div class="row">
+      <div class="field form-group col-sm-12 col-md-6">
+        <%= f.label :realty_country, 'Выбрать страну' %>
+        <%=  collection_select(:realty, :realty_country_id, RealtyCountry.all, :id, :country_name, {:include_blank => "Оставить пустым"}, { class: 'form-control'}) %>
+      </div>
+    </div>
+
   <div class="field form-group">
     <%= f.label :realty_img, 'Картинка для превью' %>
     <%= f.file_field :realty_img %>

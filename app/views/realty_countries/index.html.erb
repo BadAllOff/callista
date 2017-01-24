@@ -1,0 +1,18 @@
+<br>
+<ol class="breadcrumb">
+  <li><%= link_to t('navigation.links.home') , root_path %></li>
+  <li><%= link_to t('titles.realty_countries'), realty_countries_path %></li>
+</ol>
+<% if user_signed_in? %>
+  <%= link_to t('realty_countries.new_realty_country'), new_realty_country_path, class: 'btn btn-primary' %>
+  <br>
+  <br>
+<% end %>
+
+<div class="row">
+  <% @realty_countries.each do |country| %>
+    <%= render partial: '/realty_countries/realty_country', locals: {country: country} %>
+  <% end %>
+</div>
+<div class="clearfix"></div>
+

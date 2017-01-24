@@ -19,6 +19,7 @@ az:
     photos: 'Фото'
     pages: 'Страницы'
     jumbotrons: 'Вывиски'
+    realty_countries: "Ölkeler"
   btns:
     show: 'Показать'
     edit: 'Редактировать'
@@ -236,3 +237,5 @@ az:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: günortadan sonra
+  realty_countries:
+    show_realties: "Əmlak"

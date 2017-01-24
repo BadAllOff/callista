@@ -14,7 +14,7 @@
     <% if user_signed_in? %>
       <p>
         <%= link_to t('btns.show'), realty, class: 'btn btn-default btn-xs' %>
-        <%= link_to t('btns.edit'), edit_realty_path(realty), class: 'btn btn-default btn-xs' %>
+        <%= link_to t('btns.edit'), edit_realty_path(realty), class: 'btn btn-warning btn-xs' %>
         <%= link_to t('btns.destroy'), realty, method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
       </p>
     <% end %>

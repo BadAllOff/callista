@@ -5,17 +5,15 @@
 </ol>
 <% if user_signed_in? %>
   <%= link_to 'New Service', new_service_path, class: 'btn btn-lg btn-primary' %>
+  <br>
+  <br>
 <% end %>
-<br>
 
 <div class="row">
-  <% @services.each_slice(3) do |slice| %>
-    <div>
-      <% slice.each do |service| %>
-        <%= render partial: 'services/service', locals: { service: service } %>
-      <% end %>
-    </div>
-    <div class="clearfix"></div>
-  <% end %>
-
+  <div>
+    <% @services.each do |service| %>
+      <%= render partial: 'services/service', locals: { service: service } %>
+    <% end %>
+  </div>
+  <div class="clearfix"></div>
 </div>
