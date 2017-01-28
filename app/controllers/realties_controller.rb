@@ -6,7 +6,7 @@ class RealtiesController < ApplicationController
   # GET /realties
   # GET /realties.json
   def index
-    @realties = Realty.all
+    @realties = Realty.all.order(created_at: :asc)
   end
 
   # GET /realties/1

@@ -15,7 +15,7 @@ class RealtyCountriesController < ApplicationController
   # GET /realty_countries/1/realties
   def realties
     @realty_country = RealtyCountry.find(params[:realty_country_id])
-    @realties = Realty.where(realty_country_id: params[:realty_country_id])
+    @realties = Realty.where(realty_country_id: params[:realty_country_id]).order(created_at: :asc)
     render 'realties/index'
   end
 
