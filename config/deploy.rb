@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.7.0"
+lock "~> 3.7"
 
 set :application, 'callista'
 set :repo_url, 'git@github.com:BadAllOff/callista.git'
