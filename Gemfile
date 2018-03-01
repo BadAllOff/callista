@@ -27,8 +27,7 @@ gem 'sdoc', group: :doc
 # Use Unicorn as the app server
 gem 'unicorn'
 
-# Use Capistrano for deployment
-gem 'capistrano-rails', group: :development
+
 
 gem 'execjs'
 gem 'therubyracer', :platforms => :ruby
@@ -63,7 +62,8 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console'
   gem "rubycritic", require: false
-
+# Use Capistrano for deployment
+  gem 'capistrano-rails', '~> 1.2.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
