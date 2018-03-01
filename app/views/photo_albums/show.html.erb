@@ -16,19 +16,21 @@
 <% end %>
 
 
-<div>
+<div class="popup-gallery">
   <% @photo_album.photos.each_slice(4) do |photos| %>
       <div>
         <% photos.each_with_index do |photo, index| %>
           <div class="pull-left">
             <div>
-              <%= image_tag photo.thumb.url,
-                            class: 'img-responsive img-thumbnail',
-                            alt: 'Alt text',
-                            data: { toggle: 'lightbox',
-                                    gallery: @photo_album.id,
-                                    type: 'image',
-                                    remote: photo.url }%>
+              <a class="original-image" href="<%= photo.url %>">
+                <%= image_tag photo.thumb.url,
+                              class: 'img-responsive img-thumbnail',
+                              alt: photo.filename,
+                              data: { toggle: 'lightbox',
+                                      gallery: @photo_album.id,
+                                      type: 'image',
+                                      remote: photo.url }%>
+              </a>
             </div>
 
             <div>

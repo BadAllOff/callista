@@ -159,9 +159,9 @@ GEM
     launchy (2.4.3)
       addressable (~> 2.3)
     libv8 (3.16.14.17)
-    lightbox-bootstrap-rails (3.3.0.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
+    magnific-popup-rails (1.1.0)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
     mail_form (1.6.0)
@@ -331,7 +331,7 @@ DEPENDENCIES
   globalize!
   jbuilder
   jquery-rails
-  lightbox-bootstrap-rails
+  magnific-popup-rails (~> 1.1.0)
   mail_form
   momentjs-rails
   paperclip

@@ -17,19 +17,21 @@
     <%= link_to t('btns.destroy'), @realty, method: :delete, class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
   </p>
 <% end %>
-<div class="realty_images">
+<div class="popup-gallery">
   <% if @realty.photo_album.present?  %>
       <h3><%= @realty.photo_album.title %></h3>
       <% @realty.photo_album.photos.each_with_index do |photo, index| %>
           <div class="pull-left">
             <div>
-              <%= image_tag photo.thumb.url,
-                            class: 'img-responsive img-thumbnail',
-                            alt: 'Alt text',
-                            data: { toggle: 'lightbox',
-                                    gallery: @realty.photo_album.id,
-                                    type: 'image',
-                                    remote: photo.url }%>
+              <a class="original-image" title="Image Caption" href="<%= photo.url %>">
+                <%= image_tag photo.thumb.url,
+                              class: 'img-responsive img-thumbnail',
+                              alt: photo.filename,
+                              data: { toggle: 'lightbox',
+                                      gallery: @realty.photo_album.id,
+                                      type: 'image',
+                                      remote: photo.url }%>
+              </a>
             </div>
             <% if user_signed_in? %>
               <div>
@@ -46,6 +48,7 @@
 </div>
 <br>
 <br>
+
 
 <% if user_signed_in? %>
   <%= link_to t('btns.edit'), edit_realty_path(@realty), class: 'btn btn-default' %> |

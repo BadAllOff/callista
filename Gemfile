@@ -40,7 +40,7 @@ gem 'ckeditor'
 gem 'active_link_to'
 gem 'rmagick'
 gem 'carrierwave', '>= 1.0.0.rc'
-gem 'lightbox-bootstrap-rails'
+# gem 'lightbox-bootstrap-rails'
 gem 'globalize', github: 'globalize/globalize'
 gem 'activemodel-serializers-xml'
 gem 'annotate'
@@ -49,6 +49,7 @@ gem 'devise-i18n'
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 gem 'mail_form'
+gem 'magnific-popup-rails', '~> 1.1.0'
 
 
 
