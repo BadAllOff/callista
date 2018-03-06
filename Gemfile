@@ -56,6 +56,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rubocop', require: false
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails'
 end
 
 group :development do
