@@ -13,8 +13,8 @@
 
     <div class="row">
       <div class="field form-group col-sm-12 col-md-6">
-        <%= f.label :realty_country, 'Выбрать страну' %>
-        <%=  collection_select(:realty, :realty_country_id, RealtyCountry.all, :id, :country_name, {:include_blank => "Оставить пустым"}, { class: 'form-control'}) %>
+        <%= f.label :country, 'Выбрать страну' %>
+        <%=  collection_select(:realty, :country_id, Country.all, :id, :country_name, {:include_blank => "Оставить пустым"}, { class: 'form-control'}) %>
       </div>
     </div>
 

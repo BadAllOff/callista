@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170124212254) do
+ActiveRecord::Schema.define(version: 20180310163335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,28 @@ ActiveRecord::Schema.define(version: 20170124212254) do
     t.datetime "updated_at",                   null: false
     t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
     t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "country_name"
+    t.text     "description"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "preview_img_file_name"
+    t.string   "preview_img_content_type"
+    t.integer  "preview_img_file_size"
+    t.datetime "preview_img_updated_at"
+  end
+
+  create_table "country_translations", force: :cascade do |t|
+    t.integer  "country_id",   null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "country_name"
+    t.string   "description"
+    t.index ["country_id"], name: "index_country_translations_on_country_id", using: :btree
+    t.index ["locale"], name: "index_country_translations_on_locale", using: :btree
   end
 
   create_table "jumbotron_translations", force: :cascade do |t|
@@ -125,30 +147,8 @@ ActiveRecord::Schema.define(version: 20170124212254) do
     t.string   "realty_img_content_type"
     t.integer  "realty_img_file_size"
     t.datetime "realty_img_updated_at"
-    t.integer  "realty_country_id"
-    t.index ["realty_country_id"], name: "index_realties_on_realty_country_id", using: :btree
-  end
-
-  create_table "realty_countries", force: :cascade do |t|
-    t.string   "country_name"
-    t.text     "description"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "preview_img_file_name"
-    t.string   "preview_img_content_type"
-    t.integer  "preview_img_file_size"
-    t.datetime "preview_img_updated_at"
-  end
-
-  create_table "realty_country_translations", force: :cascade do |t|
-    t.integer  "realty_country_id", null: false
-    t.string   "locale",            null: false
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-    t.string   "country_name"
-    t.string   "description"
-    t.index ["locale"], name: "index_realty_country_translations_on_locale", using: :btree
-    t.index ["realty_country_id"], name: "index_realty_country_translations_on_realty_country_id", using: :btree
+    t.integer  "country_id"
+    t.index ["country_id"], name: "index_realties_on_country_id", using: :btree
   end
 
   create_table "realty_translations", force: :cascade do |t|

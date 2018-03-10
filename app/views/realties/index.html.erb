@@ -1,9 +1,9 @@
 <br>
 <ol class="breadcrumb">
   <li><%= link_to t('navigation.links.home') , root_path %></li>
-  <li><%= link_to t('titles.realty_countries'), realty_countries_path %></li>
-  <% if @realty_country %>
-    <li><%= link_to @realty_country.country_name , realty_country_realties_path(@realty_country) %></li>
+  <li><%= link_to t('titles.realty_countries'), countries_path %></li>
+  <% if @country %>
+    <li><%= link_to @country.country_name , country_realties_path(@country) %></li>
   <% end %>
 </ol>
 <% if user_signed_in? %>

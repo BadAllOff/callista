@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
     devise_for :users
-    resources :realty_countries do
-      get 'realties' => 'realty_countries#realties'
+    resources :countries do
+      get 'realties' => 'countries#realties'
     end
     resources :photo_albums do
       resources :photos, only: [:create, :destroy]

@@ -1,0 +1,1 @@
+json.partial! "countries/realty_country", realty_country: @realty_country

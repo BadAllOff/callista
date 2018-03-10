@@ -3,13 +3,13 @@
     <% if user_signed_in? %>
         <p>
           <%= link_to t('btns.show'), country, class: 'btn btn-xs btn-default' %>
-          <%= link_to t('btns.edit'), edit_realty_country_path(country), class: 'btn btn-xs btn-warning' %>
+          <%= link_to t('btns.edit'), edit_country_path(country), class: 'btn btn-xs btn-warning' %>
           <%= link_to t('btns.destroy'), country, method: :delete, class: 'btn btn-xs btn-danger', data: { confirm: 'Are you sure?' } %>
         </p>
     <% end %>
     <img src="<%= country.preview_img.url(:original) if country.preview_img.present? %>" alt="<%= country.country_name %>" class="img-responsive">
     <div class="caption">
-      <%= link_to realty_country_realties_path(country) do %>
+      <%= link_to country_realties_path(country) do %>
           <h3><%= country.country_name %></h3>
       <% end %>
       <div class="service-thumbnail-preview">
@@ -17,7 +17,7 @@
       </div>
       <br>
       <p>
-        <%= link_to t('realty_countries.show_realties')+' »', realty_country_realties_path(country), class: 'btn btn-lg btn-default', style: 'bottom: 34px; position: absolute;'  %>
+        <%= link_to t('realty_countries.show_realties')+' »', country_realties_path(country), class: 'btn btn-lg btn-default', style: 'bottom: 34px; position: absolute;'  %>
       </p>
     </div>
   </div>

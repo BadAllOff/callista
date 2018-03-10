@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: realty_countries
+# Table name: countries
 #
 #  id                       :integer          not null, primary key
 #  country_name             :string

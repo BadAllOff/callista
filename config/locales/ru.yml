@@ -20,7 +20,7 @@ ru:
     photos: 'Фото'
     pages: 'Страницы'
     jumbotrons: 'Вывиски'
-    realty_countries: "Страны"
+    countries: "Страны"
   btns:
     show: 'Показать'
     edit: 'Редактировать'
@@ -309,6 +309,6 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
-  realty_countries:
-    new_realty_country: "Добваить страну"
+  countries:
+    new_country: "Добваить страну"
     show_realties: "Смотреть недвижимость"

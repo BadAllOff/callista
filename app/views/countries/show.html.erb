@@ -1,0 +1,12 @@
+<br>
+<ol class="breadcrumb">
+  <li><%= link_to t('navigation.links.home') , root_path %></li>
+  <li><%= link_to t('titles.realty_countries'), countries_path %></li>
+  <li><%= link_to @country.country_name , countries_path(@country) %></li>
+</ol>
+<div class="row">
+  <%= render partial: '/countries/country', locals: {country: @country} %>
+  <div class="clearfix"></div>
+  <hr>
+  <%= link_to 'Back', countries_path, class: 'btn btn-default' %>
+</div>

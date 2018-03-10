@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: jumbotrons
+#
+#  id         :integer          not null, primary key
+#  btn_color  :string           default("blue")
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 require 'rails_helper'
 
 RSpec.describe Jumbotron, type: :model do

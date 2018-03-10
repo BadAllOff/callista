@@ -20,7 +20,7 @@ en:
     photos: 'Фото'
     pages: 'Страницы'
     jumbotrons: 'Вывиски'
-    realty_countries: "Countries"
+    countries: "Countries"
   btns:
     show: 'Show'
     edit: 'Edit'
@@ -255,6 +255,6 @@ en:
       long: "%B %d, %Y %H:%M"
       short: "%d %b %H:%M"
     pm: pm
-  realty_countries:
-    new_realty_country: "New Country"
+  countries:
+    new_country: "New Country"
     show_realties: "Show realties"

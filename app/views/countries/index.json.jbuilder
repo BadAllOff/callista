@@ -1,0 +1,1 @@
+json.array! @realty_countries, partial: 'countries/realty_country', as: :realty_country

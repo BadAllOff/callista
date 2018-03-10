@@ -20,6 +20,7 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
+  # TODO change back to :page_load and false if migrations is pending
   config.active_record.migration_error = :page_load
 
   # Debug mode disables concatenation and preprocessing of assets.

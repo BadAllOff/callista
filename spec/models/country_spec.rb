@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe RealtyCountry, type: :model do
+RSpec.describe Country, type: :model do
   describe 'Associations' do
-    it { should have_many(:realties).dependent(:nullify) }
+    it { should have_many(:realties).dependent(:destroy) }
   end
 
   describe 'Validations' do
