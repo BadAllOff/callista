@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180310163335) do
+ActiveRecord::Schema.define(version: 20180310171141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,8 +32,6 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "countries", force: :cascade do |t|
-    t.string   "country_name"
-    t.text     "description"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "preview_img_file_name"
@@ -66,12 +64,9 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "jumbotrons", force: :cascade do |t|
-    t.string   "head_text",   default: "Marketing stuff!"
-    t.string   "lead_text",   default: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet."
-    t.string   "button_text", default: "Get started today"
-    t.string   "btn_color",   default: "blue"
-    t.datetime "created_at",                                                                                                                                                                                       null: false
-    t.datetime "updated_at",                                                                                                                                                                                       null: false
+    t.string   "btn_color",  default: "blue"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "page_translations", force: :cascade do |t|
@@ -86,8 +81,6 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "pages", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.integer  "jumbotron_id"
@@ -105,7 +98,6 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "photo_albums", force: :cascade do |t|
-    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.json     "photos"
@@ -139,8 +131,6 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "realties", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.string   "realty_img_file_name"
@@ -175,11 +165,8 @@ ActiveRecord::Schema.define(version: 20180310163335) do
   end
 
   create_table "services", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
-    t.text     "preview"
     t.string   "preview_img_file_name"
     t.string   "preview_img_content_type"
     t.integer  "preview_img_file_size"
