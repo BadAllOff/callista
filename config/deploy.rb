@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "~> 3.7"
+lock '~> 3.7'
 
 set :application, 'callista'
 set :repo_url, 'git@github.com:BadAllOff/callista.git'
@@ -13,7 +13,7 @@ append :linked_files, 'config/database.yml', 'config/secrets.yml', '.env'
 append :linked_dirs, 'bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/uploads', 'public/ckeditor_assets', 'vendor/bundle'
 
 namespace :deploy do
-  %w[start stop restart].each do |command|
+  %w(start stop restart).each do |command|
     desc 'Manage Unicorn'
     task command do
       on roles(:app), in: :sequence, wait: 5 do

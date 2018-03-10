@@ -9,8 +9,7 @@ class CountriesController < ApplicationController
 
   # GET /countries/1
   # GET /countries/1.json
-  def show
-  end
+  def show; end
 
   # GET /countries/1/realties
   def realties
@@ -25,8 +24,7 @@ class CountriesController < ApplicationController
   end
 
   # GET /countries/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /countries
   # POST /countries.json

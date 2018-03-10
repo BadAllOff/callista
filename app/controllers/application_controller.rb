@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     # request.env["HTTP_ACCEPT_LANGUAGE"]
   end
 
-  def default_url_options(options = {})
+  def default_url_options(_options = {})
     { locale: I18n.locale }
   end
 end

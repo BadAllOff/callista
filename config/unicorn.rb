@@ -1,4 +1,4 @@
-root = "/opt/www/callista/current"
+root = '/opt/www/callista/current'
 
 working_directory root
 
@@ -8,7 +8,7 @@ stderr_path "#{root}/log/unicorn.log" # логи ошибок
 
 stdout_path "#{root}/log/unicorn.log" # логи сервака
 
-listen "/tmp/unicorn.callista.sock"
+listen '/tmp/unicorn.callista.sock'
 
 worker_processes 1
 
