@@ -1,0 +1,29 @@
+<div class="popup-gallery">
+  <% if photo_album.present?  %>
+    <h3><%= photo_album.title %></h3>
+    <% photo_album.photos.each_with_index do |photo, index| %>
+      <div class="pull-left">
+        <div>
+          <a class="original-image" title="Image Caption" href="<%= photo.url %>">
+            <%= image_tag photo.thumb.url,
+                          class: 'img-responsive img-thumbnail',
+                          alt: photo.filename,
+                          data: { toggle: 'lightbox',
+                                  gallery: photo_album.id,
+                                  type: 'image',
+                                  remote: photo.url }%>
+          </a>
+        </div>
+        <% if user_signed_in? %>
+          <div>
+            <%= link_to "Delete", photo_album_photo_path(photo_album, index),
+                        method: :delete,
+                        class: 'btn btn-danger',
+                        data: { confirm: "Are you sure you want to delete this image?" } %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+  <div class="clearfix"></div>
+</div>

@@ -15,36 +15,7 @@
     </div>
 <% end %>
 
-
-<div class="popup-gallery">
-  <% @photo_album.photos.each_slice(4) do |photos| %>
-      <div>
-        <% photos.each_with_index do |photo, index| %>
-          <div class="pull-left">
-            <div>
-              <a class="original-image" href="<%= photo.url %>">
-                <%= image_tag photo.thumb.url,
-                              class: 'img-responsive img-thumbnail',
-                              alt: photo.filename,
-                              data: { toggle: 'lightbox',
-                                      gallery: @photo_album.id,
-                                      type: 'image',
-                                      remote: photo.url }%>
-              </a>
-            </div>
-
-            <div>
-              <%= link_to "Delete", photo_album_photo_path(@photo_album, index),
-                          method: :delete,
-                          class: 'btn btn-danger',
-                          data: { confirm: "Are you sure you want to delete this image?" } %>
-            </div>
-          </div>
-      <% end %>
-      </div>
-      <p class="clearfix"></p>
-  <% end %>
-</div>
+<%= render partial: 'photo_albums/photo_album', locals: {photo_album: @photo_album}%>
 
 <%= link_to t('btns.edit'), edit_photo_album_path(@photo_album) %> |
 <%= link_to t('btns.back'), photo_albums_path %>

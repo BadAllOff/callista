@@ -64,7 +64,7 @@ class RealtiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_realty
-      @realty = Realty.find(params[:id])
+      @realty = Realty.includes(:photo_album).find(params[:id])
     end
 
     def set_country
