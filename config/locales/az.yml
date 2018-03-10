@@ -21,10 +21,10 @@ az:
     jumbotrons: 'Вывиски'
     countries: "Ölkeler"
   btns:
-    show: 'Показать'
-    edit: 'Редактировать'
-    destroy: 'Удалить'
-    back: 'Назад'
+    show: 'Göstər'
+    edit: 'Düzəliş edin'
+    destroy: 'Sil'
+    back: 'Geri qayıdın'
     photoalbum:
       new: 'Создать новый Альбом'
     jumbotron:
@@ -32,17 +32,17 @@ az:
     project:
       new: 'Создать новый проект'
     contacts:
-      send_message: 'Отправить сообщение'
+      send_message: 'Mesajı göndər'
   services:
-    view_details: 'Узнать больше'
+    view_details: 'Daha çox məlumat'
   projects:
-    start_date: 'Дата мероприятия'
+    start_date: 'Tədbirin tarixi'
   contacts:
-    name: 'Имя Фамилия'
+    name: 'Adınız Soyadınız'
     email: 'Email'
-    message: 'Сообщение'
-    thank_you_for_your_message_we_will_contact_you_soon: 'Благодарим за Ваше сообщение. Мы скоро с вами свяжемся!'
-    cannot_send_message: 'Что то пошло не так. Невозможно отправить сообщение. Пожалуйста попробуйте позже.'
+    message: 'Mesajınız'
+    thank_you_for_your_message_we_will_contact_you_soon: 'Mesajınız üçün təşəkkür edirik. Tezliklə sizinlə əlaqə saxlayacağıq!'
+    cannot_send_message: 'Mesajı göndərmək olmur. Xahiş edirik daha sonra yenidən cəhd edin.'
   activerecord:
     errors:
       messages:

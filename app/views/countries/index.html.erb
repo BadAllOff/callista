@@ -1,10 +1,10 @@
 <br>
 <ol class="breadcrumb">
   <li><%= link_to t('navigation.links.home') , root_path %></li>
-  <li><%= link_to t('titles.realty_countries'), countries_path %></li>
+  <li><%= link_to t('titles.countries'), countries_path %></li>
 </ol>
 <% if user_signed_in? %>
-  <%= link_to t('realty_countries.new_realty_country'), new_country_path, class: 'btn btn-primary' %>
+  <%= link_to t('countries.new_country'), new_country_path, class: 'btn btn-primary' %>
   <br>
   <br>
 <% end %>
