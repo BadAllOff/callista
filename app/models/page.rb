@@ -16,4 +16,6 @@ class Page < ApplicationRecord
   translates :title, :description, fallbacks_for_empty_translations: true
 
   belongs_to :jumbotron
+
+  validates_presence_of :title, :description
 end

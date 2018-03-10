@@ -18,4 +18,6 @@ class PhotoAlbum < ApplicationRecord
 
   belongs_to :realty
   mount_uploaders :photos, PhotosUploader
+
+  validates_presence_of :title
 end
